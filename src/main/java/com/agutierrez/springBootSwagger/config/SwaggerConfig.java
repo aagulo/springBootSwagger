@@ -20,8 +20,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.agutierrez.springBootSwagger.controller"))
-                .paths(regex("/greeting.*"))
+                .apis(RequestHandlerSelectors.basePackage("com.agutierrez.springBootSwagger.parserJson.controller"))
                 .build()
                 .apiInfo(metaData());
     }
